@@ -1,0 +1,285 @@
+﻿@charset "utf-8";
+*{
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
+    -ms-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+html
+{
+    height:100%;
+    font-size: 62.5%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+body{height:100%;color:#333;background:#fff; font-size:1.4rem;font-family:"Microsoft YaHei"}
+ul,ol{list-style-type:none;}
+li{list-style:none outside none;}
+a{text-decoration:none;}
+img{border:none;}
+.clearfix:after
+{
+    content:'.';
+    display:block;
+    width:100%;
+    height:0;
+    visibility:hidden;
+    clear:both;
+}
+.ub
+{
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+}
+.ub-f1
+{
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    box-flex:1;
+}
+.fw
+{
+    width:100%;
+}
+
+/* 新人大礼包 */
+.xinren
+{
+
+}
+.xinren header
+{
+    position:relative;
+    background:#ec005f;
+}
+.xinren .bg
+{
+    width:100%;
+    max-width:100%;
+}
+.myq-box
+{
+    padding:1rem 5%;
+}
+.myq-box .myq-item
+{
+    float:left;
+    height:4rem;
+    margin:0 1% 0 0;
+}
+.myq-box .myq-item em
+{
+    display:block;
+    float:right;
+    width:3.2rem;
+    height:3.2rem;
+    margin:0.3rem;
+    line-height:3.2rem;
+    font-size:0.8rem;
+    font-style:normal;
+    color:#fff;
+    text-align:center;
+    background:#ec005f;
+    border-radius:50%;
+}
+.myq-box-1 .myq-item
+{
+    width:32%;
+}
+.myq-box-2 .myq-item
+{
+    width:32%;
+    margin:0 6% 0 0;
+}
+.myq-box-2 .myq-item:first-child
+{
+    margin-left:15%;
+}
+.myq-item-5
+{
+    background:url(../images/img_xinren_yhq5.png) no-repeat;
+    background-size:100% 100%;
+}
+.myq-item-10
+{
+    background:url(../images/img_xinren_yhq10.png) no-repeat;
+    background-size:100% 100%;
+}
+.myq-item-20
+{
+    background:url(../images/img_xinren_yhq20.png) no-repeat;
+    background-size:100% 100%;
+}
+.bg-xinren-cloud
+{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+/* 我要领取按钮*/
+.xinren header .btn-lingqu
+{
+    position:absolute;
+    bottom:0;
+    width:60%;
+    margin:0 20%;
+}
+.btn-lingqu>a>img
+{
+    width:100%;
+    max-width:100%;
+}
+
+/* 活动规则 */
+.rule
+{
+    padding:2rem;
+    color:#e50278;
+}
+.rule>h1
+{
+    margin:0 0 1.6rem 0;
+}
+.rule>p
+{
+    padding: 0 0 0 2rem;
+    line-height:2rem;
+}
+.rule>p>i
+{
+    margin-left:-2rem;
+    font-style:normal;
+}
+
+
+
+
+
+
+/* 抽奖myBox */
+.myBox{width:100%;height:100%;margin:0 auto;padding:1rem;}
+.cj{position:relative;height:100%;background:#f5f5f5;}
+.cj li{position:absolute;float:left;width:24%;height:0;font-size:0;line-height:6rem;padding:0 0 24%;}
+.cj li > div
+{
+    position:absolute;
+    width:100%;
+    height:100%; background:#394B64;font-size:1.2rem;font-weight:bold;text-align:center;color:#fff;
+}
+
+/*设8个奖项的样式*/
+.twelve-item li:nth-of-type(1)
+{
+    left:0;top:0;
+}
+.twelve-item li:nth-of-type(2)
+{
+    left:25%;top:0;
+}
+.twelve-item li:nth-of-type(3)
+{
+    left:50%;top:0;
+}
+.twelve-item li:nth-of-type(4)
+{
+    left:75%;top:0;
+}
+.twelve-item li:nth-of-type(5)
+{
+    left:75%;top:14%;
+}
+.twelve-item li:nth-of-type(6)
+{
+    left:75%;top:28%;
+}
+.twelve-item li:nth-of-type(7)
+{
+    left:75%;top:42%;
+}
+.twelve-item li:nth-of-type(8)
+{
+    left:50%;top:42%;
+}
+.twelve-item li:nth-of-type(9)
+{
+    left:25%;top:42%;
+}
+
+.twelve-item li:nth-of-type(10)
+{
+    left:0;top:42%;
+}
+
+.twelve-item li:nth-of-type(11)
+{
+    left:0;top:28%;
+}
+.twelve-item li:nth-of-type(12)
+{
+    left:0;top:14%;
+}
+
+
+
+.cj li.adcls>div{background:#FF6600;}
+.bt{position:absolute;left:38%;top:22%;width:30%;height:6rem;margin:0 auto 0;background:#FF6600;font-weight:bold;font-size:2rem;line-height:3rem;text-align:center;color:#fff;cursor:pointer;}
+#cj-a{margin:0 auto ;}
+.dialog
+{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    padding:0 1rem;
+    background:rgba(0,0,0,.6);
+}
+.text{position:relative;left:0;width:100%;padding:4rem 0;background:#CE0000;font:normal 1.6rem/2rem '微软雅黑';text-align:center;color:#fff;}
+.text span{color:yellow;}
+.text.t1{top:10%;}
+.text.t2{top:20%;}
+
+/*领奖表单样式*/
+.frm-award
+{
+    position:absolute;
+    top:60%;
+    width:100%;
+    padding:0 1rem;
+    margin:1rem 0 0;
+}
+.frm-award .form-item
+{
+    margin:1.5rem 0 0;
+}
+.frm-award input
+{
+    width:100%;
+    font-size:2rem;
+    text-align:center;
+    outline:none;
+}
+.frm-award input[type=tel]
+{
+    padding:.5rem 1rem;
+    border:1px solid #d7d7d7;
+    border-radius:.5rem;
+}
+.frm-award input[type=submit]
+{
+    padding:.5rem 0;
+    background:#CE0000;
+    color:#fff;
+    border:none;
+    border-radius:.5rem;
+}
+.tips-white
+{
+    margin:.5rem 0 0;
+    color:#fff;
+    font-size:1.6rem;
+}
