@@ -358,6 +358,164 @@ img{border:none;}
 }
 
 
+/* 礼物领取页面 */
+.bd-gift
+{
+    height:auto;
+    padding-bottom:6rem;
+    background:#f5f5f5;
+    color:#000;
+}
+/* 礼物领取页面-地址框样式 */
+.address-box
+{
+    background:#fff;
+}
+.address-box:before,
+.address-box:after
+{
+    content:'';
+    display:block;
+    width:100%;
+    height:0.5rem;
+    background:url(../images/img_bg_address.png) repeat-x;
+}
+.address-box .content
+{
+    padding:2% 3%;
+}
+.address-box .content h1
+{
+    margin:0 0 1rem 0;
+    font-size:1.6rem;
+    font-weight:400;
+    color:#333;
+}
+.address-box .content h1 span
+{
+    margin:0 10% 0 0;
+}
+.address-box .content .icon-user
+{
+    display:inline-block;
+    width:1.38rem;
+    height:1.33rem;
+    margin:0 1rem 0 0;
+    background:url(../images/icon_user.png) no-repeat center center;
+    background-size:cover;
+}
+.address-box .content .icon-tel
+{
+    display:inline-block;
+    width:1.44rem;
+    height:1.33rem;
+    margin:0 1rem 0 0;
+    background:url(../images/icon_tel.png) no-repeat center center;
+    background-size:cover;
+}
+.address-box .content p
+{
+    color:#666666;
+    line-height:1.8rem;
+}
+.bd-gift .content-box
+{
+    margin:1rem 0 0 0;
+    padding:1rem 2rem;
+    background:#fff;
+    border:1px solid #e4e4e4;
+    border-width:1px 0;
+}
+/* 礼物描述 */
+.media
+{
+}
+.media .left
+{
+    display:table-cell;
+    vertical-align:central;
+    text-align:center;
+    width:7rem;
+    border:1px solid #e4e4e4;
+}
+.media .left img
+{
+    display:block;
+    max-width:100%;
+    max-height:100%;
+}
+.media .right
+{
+    margin:0 0 0 1rem;
+}
+.media h1
+{
+    font-size:1.6rem;
+    font-weight:400;
+}
+.media p
+{
+    color:#333;
+    font-size:1.3rem;
+}
+/* 免责声明 */
+.declaraction
+{
+}
+.declaraction h1
+{
+    font-size:1.4rem;
+    font-weight:400;
+    color:#333;
+}
+.declaraction p
+{
+    padding:0 0 0 2rem;
+    color:#666;
+    line-height:1.8rem;
+    font-size:1.2rem;
+}
+.declaraction p i
+{
+    margin-left:-2rem;
+    font-style:normal;
+}
+.bd-gift footer
+{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:4.5rem;
+    background:#fff;
+    border-top:1px solid #e4e4e4;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+}
+.bd-gift footer .btn-red
+{
+    width:80%;
+    height:3.8rem;
+    background:#e72b41;
+    font-size:1.8rem;
+    border-radius:.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
