@@ -45,7 +45,7 @@ img{border:none;}
     width:100%;
 }
 
-/* 新人大礼包 */
+/* 新人大礼包 begin */
 .xinren
 {
 
@@ -60,17 +60,17 @@ img{border:none;}
     width:100%;
     max-width:100%;
 }
-.myq-box
+.xinren .myq-box
 {
     padding:1rem 5%;
 }
-.myq-box .myq-item
+.xinren .myq-box .myq-item
 {
     float:left;
     height:4rem;
     margin:0 1% 0 0;
 }
-.myq-box .myq-item em
+.xinren .myq-box .myq-item em
 {
     display:block;
     float:right;
@@ -85,35 +85,35 @@ img{border:none;}
     background:#ec005f;
     border-radius:50%;
 }
-.myq-box-1 .myq-item
+.xinren .myq-box-1 .myq-item
 {
     width:32%;
 }
-.myq-box-2 .myq-item
+.xinren .myq-box-2 .myq-item
 {
     width:32%;
     margin:0 6% 0 0;
 }
-.myq-box-2 .myq-item:first-child
+.xinren .myq-box-2 .myq-item:first-child
 {
     margin-left:15%;
 }
-.myq-item-5
+.xinren .myq-item-5
 {
     background:url(../images/img_xinren_yhq5.png) no-repeat;
     background-size:100% 100%;
 }
-.myq-item-10
+.xinren .myq-item-10
 {
     background:url(../images/img_xinren_yhq10.png) no-repeat;
     background-size:100% 100%;
 }
-.myq-item-20
+.xinren .myq-item-20
 {
     background:url(../images/img_xinren_yhq20.png) no-repeat;
     background-size:100% 100%;
 }
-.bg-xinren-cloud
+.xinren .bg-xinren-cloud
 {
     display:block;
     width:100%;
@@ -127,17 +127,22 @@ img{border:none;}
     width:60%;
     margin:0 20%;
 }
-.btn-lingqu>a>img
+.xinren .btn-lingqu>a>img
 {
     width:100%;
     max-width:100%;
 }
+/* 新人礼包-活动规则 */
+.xinren .rule
+{
+    color:#e50278;
+}
 
-/* 活动规则 */
+/* 新人礼包、分享邀请-通用活动规则 */
 .rule
 {
     padding:2rem;
-    color:#e50278;
+    color:#666;
 }
 .rule>h1
 {
@@ -153,6 +158,205 @@ img{border:none;}
     margin-left:-2rem;
     font-style:normal;
 }
+/* 新人大礼包 end */
+
+.bd-share
+{
+    background:#fffae6;
+}
+.share
+{
+    position:relative;
+}
+.share header
+{
+    padding-bottom:10%;
+}
+.share .bg
+{
+    width:100%;
+    max-width:100%;
+}
+.share .content-box
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.share .title
+{
+    width:80%;
+    margin:3.3rem 10% 0;
+}
+.share h2
+{
+    margin:0.3rem 4% 0;
+    font-size:1.2rem;
+    font-weight:400;
+    text-align:center;
+    color:#fff;
+}
+.share .share-envelope
+{
+    position:relative;
+    width:90%;
+    margin:20% 5% 0;
+}
+.share .share-envelope img
+{
+    width:100%;
+    max-width:100%;
+}
+.share .share-envelope .btn-share
+{
+    position:absolute;
+    left:31%;
+    top:20%;
+    display:block;
+    width:38%;
+    border-radius:50%;
+    border:1px solid #ffde59;
+}
+.share .btn-share:before
+{
+    content:'';
+    display:inline-block;
+    padding-bottom:100%;
+    width:.1px;
+    vertical-align:middle;
+}
+.share .btn-share>div
+{
+    position:absolute;
+    left:5%;
+    top:5%;
+    width:90%;
+    height:90%;
+    border-radius:50%;
+    background:#ffde59;
+}
+.share .btn-share>div>img
+{
+    display:block;
+    max-width:60%;
+    margin:15% auto 0;
+}
+.share .rule
+{
+    color:#d71c1c;
+}
+/* 分享成功表单样式*/
+.mask
+{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+.frm-share
+{
+    display:block;
+    position:absolute;
+    top:28%;
+    left:16.7%;
+    width:66.6%;
+    padding:0 2rem 1rem;
+    margin:1rem 0 0;
+    background:#fff;
+    color:#000;
+    border-radius:10px;
+    text-align:center;
+}
+.frm-share:before
+{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:10px;
+    background:#f8605f;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+.frm-share p
+{
+    width:80%;
+    margin:2.5rem auto 0;
+    text-align:center;
+    font-size:1.8rem;
+    color:#666666;
+}
+.frm-share .form-item
+{
+    margin:1.2rem 0 0;
+}
+.frm-share input
+{
+    width:100%;
+    font-size:1.4rem;
+    outline:none;
+}
+.frm-share input[type=tel]
+{
+    height:2.6rem;
+    padding:.5rem 1rem;
+    background:#ececec;
+    border:0 none;
+    border-radius:.3rem;
+}
+.frm-share input[type=submit],
+.btn-red
+{
+    height:2.6rem;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    background:#f8605f;
+    color:#fff;
+    border:none;
+    border-radius:.3rem;
+}
+.btn-red
+{
+    display:-webkit-box;
+    display:-moz-box;
+    display:-o-box;
+    display:box;
+}
+.frm-share .tips
+{
+    width:100%;
+    margin:.5rem 0 0;
+    color:#f8605f;
+    text-align:left;
+    font-size:1.4rem;
+}
+/* 分享邀请好友领好礼页-分享成功 */
+.bd-share .step3
+{
+    display:none;
+    position:absolute;
+    top:15.5%;
+    left:5%;
+    width:90%;
+}
+.bd-share .step3 .bg
+{
+    width:100%;
+}
+.bd-share .step3 .btn-red
+{
+    position:absolute;
+    left:31.5%;
+    bottom:16%;
+    width:37%;
+}
+
 
 
 
