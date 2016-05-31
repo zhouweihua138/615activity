@@ -359,6 +359,40 @@ img{border:none;}
 
 
 /* 礼物领取页面 */
+.navbar
+{
+    width:100%;
+    height:4.08rem;
+    background:#f8605f;
+}
+.navbar .nav-btn
+{
+    display:-webkit-box;
+    display:-moz-box;
+    display:-o-box;
+    display:box;
+    width:4.08rem;
+    height:4.08rem;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    vertical-align:central;
+}
+.navbar .nav-btn img
+{
+    max-width:100%;
+    max-height:100%;
+}
+.navbar h1
+{
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    font-size:1.6rem;
+    font-weight:400;
+    color:#fff;
+    text-align:center;
+}
+
+
 .bd-gift
 {
     height:auto;
@@ -500,6 +534,39 @@ img{border:none;}
     font-size:1.8rem;
     border-radius:.5rem;
 }
+.bd-gift .popup-box
+{
+    position:absolute;
+    top:20%;
+    left:15%;
+    width:70%;
+    background:#fff;
+    color:#666;
+    text-align:center;
+    border-radius:1rem;
+}
+.bd-gift .popup-box:before
+{
+    content:'';
+    display:block;
+    height:1rem;
+    background:#ff6666;
+    border-top-left-radius:1rem;
+    border-top-right-radius:1rem;
+}
+.bd-gift .popup-box img
+{
+    width:62%;
+    padding:2rem 0;
+}
+.bd-gift .popup-box .btn-red
+{
+    width:56%;
+    height:3rem;
+    margin:2rem auto;
+    border-radius:.6rem;
+}
+
 
 
 
