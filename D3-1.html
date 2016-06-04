@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>邀请好友领好礼</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body class="bd-share">
+    <article class="share">
+        <header class="fw clearfix">
+            <img class="bg" src="images/bg_share_top.png" alt=""/>
+            <div class="title-top">
+                <img class="title" src="images/img_share_title.png" alt=""/>
+                <h2>分享活动链接到朋友圈，双方可各得50元无门槛免邮券</h2>
+            </div>
+        </header>
+        <section class="share-envelope">
+            <img src="images/img_share_envelope.png" alt="" />
+            <a class="btn-share" href="javascript:void(0)">
+                <div>
+                <img src="images/btn_share_text.png" alt=""/></div></a>            
+        </section>
+        <section class="rule">
+            <h1>活动规则</h1>
+            <p><i>1、</i>活动时间：2016年6月15日至2016年6月25日，为期10天。</p>
+            <p><i>2、</i>参与方法：在分享礼页面点击“立即分享”把活动分享到微信里。</p>
+            <p><i>3、</i>点开微信内的分享链接，输入手机号就可获得50元无门槛免邮券。</p>
+            <p><i>4、</i>新用户打开红包绑定手机成为用户，也可获取并使用分享礼活动免邮券。</p>
+            <p><i>5、</i>特别说明：分享礼活动中得到的免邮券使用期限截止到：2016年6月30日23:59，详情可查看个人中心中的“优惠券”，请注意时间使用。</p>
+            <p><i>6、</i>免邮券使用：每笔订单限用一张免邮券。不挂失，不合并，不找零，不兑换现金。</p>
+            <p><i>7、</i>退款说明：活动期间内，若订单取消，将退还您在交易中实际支付的金额，免邮券自动返还到个人账户内，还可以继续使用。</p>
+            <p><i>8、</i>活动最终解释权归比呀比所有。</p>
+        </section>
+    </article>
+ </body>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+<script>
+    var imgUrl = 'http://xxx/share_ico.png';  // 分享后展示的一张图片
+    var lineLink = 'http://211.151.52.139/Activity/invitation/'; // 点击分享后跳转的页面地址
+    var descContent = "会海淘的人都用免邮券来抵扣运费。";  // 分享后的描述信息
+    var shareTitle = '你有50元免邮券未领取';  // 分享后的标题
+    var appid = '';  // 应用id,如果有可以填，没有就留空
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function (res) {
+            //_report('send_msg', res.err_msg);  // 这是回调函数，必须注释掉
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function (res) {
+            //_report('timeline', res.err_msg); // 这是回调函数，必须注释掉
+        });
+    }
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content": descContent,
+            "url": lineLink,
+        }, function (res) {
+            //_report('weibo', res.err_msg);
+        });
+    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            shareWeibo();
+        });
+    }, false);
+</script>
+ </html>
