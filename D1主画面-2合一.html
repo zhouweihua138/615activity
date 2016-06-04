@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>615海外购狂欢</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body class="bd-main">
+    <div class="fw">
+        <img class="bg" src="images/bg_main_01.png" alt=""/>
+        <img class="bg" src="images/bg_main_02.png" alt=""/>
+        <img class="bg" src="images/bg_main_03.png" alt=""/>
+        <div class="content-box">
+            <a class="go-choujiang" href="D2-1抽奖.html">
+                <img src="images/img_main_choujiang.png" alt="" />
+            </a>
+            <a class="go-share" href="D3-1.html">
+                <img src="images/img_main_share.png" alt="" />
+            </a>
+            <a class="go-xinren" href="D1-1新人礼页面.html">
+                <img src="images/img_main_xinren.png" alt="" />
+            </a>
+            <a class="go-wechat" href="D4-1微信活动介绍.html">
+                <img src="images/img_main_wechat.png" alt="" />
+            </a>
+        </div>
+    </div>
+    <footer class="activity-footer">
+        <div class="ub">
+            <a class="ub ub-f1" href="#">
+                <img src="images/btn_main_home.png" alt="" /></a>
+            <a class="ub ub-f1" href="http://m.biyabi.com">
+                <img src="images/btn_main_biyabi.png" alt="" /></a>
+            <a class="ub ub-f1 btn-fenhuichang" href="javascript:;">
+                <img src="images/btn_main_fenhuichang.png" alt="" /></a>
+        </div>
+        <div class="mask">
+            <div class="ub menu">
+                <a class="ub ub-f1" href="#">
+                    <img src="images/btn_main_home.png" alt="" /></a>
+                <a class="ub ub-f1" href="http://m.biyabi.com">
+                    <img src="images/btn_main_biyabi.png" alt="" /></a>
+                <a class="ub ub-f1 btn-fenhuichang" href="javascript:;">
+                    <img src="images/btn_main_fenhuichang.png" alt="" /></a>
+            </div>
+            <div class="sub-hall">
+                <a href="#">
+                    <img src="images/img_main_b_choujiang.png" alt="" /></a>
+                <a href="#">
+                    <img src="images/img_main_b_share.png" alt="" /></a>
+                <a href="#">
+                    <img src="images/img_main_b_xinren.png" alt="" /></a>
+                <a href="#">
+                    <img src="images/img_main_b_wechat.png" alt="" /></a>
+                <i class="icon-angle-down"></i>
+            </div>
+        </div>
+    </footer>
+ </body>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+    $(function () {
+        //设置绝对定位的内容框的高度与背景高度一致
+        var timeout = setTimeout(setHeight, 100);
+        function setHeight(){
+            $(".bd-main .content-box").css("height", $(".bd-main .fw").height());
+        }
+        $(window).on("resize",function () {
+            setHeight();
+        })
+
+        //分会场按钮触摸点击
+        $(document).on("touchstart", "footer .btn-fenhuichang", function () {
+            if ($(this).parents(".mask").length > 0 ) {
+                $(".mask").hide();
+                $("body,html").css("overflow", "visible");
+            }else {
+                $(".mask").show();
+                $("body,html").css("overflow", "hidden");
+            }
+        });
+    });
+</script>
+ </html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>向上滚动消息</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+    <style type="text/css"> 
+        .renav{ 
+            width:200px; 
+            height:150px; 
+            line-height:21px; 
+            overflow:hidden; 
+            background:#FFFFFF; 
+        } 
+        .renav li{ 
+            height:21px; 
+        } 
+    </style> 
+
+</head>
+<body>
+    <div class="renav"> 
+        <ul style="margin-top: 0px;"> 
+        <li><a>罗氏</a></li> 
+        <li><a>瑞声达</a></li> 
+        <li><a>未添加1</a></li> 
+        <li><a>未添加2</a></li> 
+        <li><a>未添加3</a></li> 
+        <li><a>未添加4</a></li> 
+        <li><a>西门子</a></li> 
+        <li><a>欧姆龙</a></li> 
+        </ul> 
+    </div> 
+    <p class="box"></p>
+
+    <script>
+        $(function () {
+            var $this = $(".renav");
+            var scrollTimer;
+            $this.hover(function () {
+                clearInterval(scrollTimer);
+            }, function () {
+                scrollTimer = setInterval(function () {
+                    scrollNews($this);
+                }, 800);
+            }).trigger("mouseout");
+        });
+        function scrollNews(obj) {
+            var $self = obj.find("ul:first");
+            var lineHeight = $self.find("li:first").height();
+            $self.animate({ "margin-top": -lineHeight + "px" }, 500, function () {
+                $self.css({ "margin-top": "0px" }).find("li:first").appendTo($self);
+            })
+        }
+    </script>
+ </body>
+ </html>

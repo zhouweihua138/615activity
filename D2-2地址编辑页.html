@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>地址编辑</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body class="bd-address">
+    <header class="navbar ub">
+        <a class="nav-btn nav-left" href="javascript:history.back()">
+            <img src="images/btn_all_back.png" alt="" /></a>
+        <h1 class="ub ub-f1">地址编辑</h1>
+        <a class="nav-btn nav-right" href="#">
+            <img src="images/btn_all_ok.png" alt="" /></a>
+    </header>
+    <form action="/" class="frm-address">
+        <div class="form-item name-box clearfix">
+            <input type="text" name="name" maxlength="20" value="" placeholder="收件人（请输入中文名字）" />
+            <span class="pull-right"><i>0</i> / 20</span>
+        </div>
+        <div class="form-item">
+            <input type="tel" name="mobile" value="" placeholder="11位手机号" />
+        </div>
+        <div class="form-item">
+            <select class="province">
+                <option value="0">请选择省份</option>
+            </select>
+            <select class="city">
+                <option value="0">请选择城市</option>
+            </select>
+            <select class="district">
+                <option value="0">请选择区县</option>
+            </select>
+        </div>
+        <div class="form-item">
+            <input type="text" name="address" value="" placeholder="街道地址" />
+        </div>
+    </form>
+ </body>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+    $(function () {
+        $(document).on("input", ".name-box input", function () {
+            var letterCount = $(this).val().length;
+            if (letterCount <= 20) {
+                $(".name-box span i").text(letterCount);
+            }
+        });
+        
+        //顶部右上角确认按钮
+        $(document).on("touchstart", "nav-right", function () {
+            //保存地址
+        });
+    });
+</script>
+ </html>
