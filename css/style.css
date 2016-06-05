@@ -18,7 +18,77 @@ img{border:none;}
 .pull-left{float:left;}
 .pull-right{float:right;}
 
+
+/* 分会场弹出层begin */
+.common-mask{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+.common-mask.show{
+    display:block;
+}
+.common-footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.common-footer>a{
+    max-width:100%;
+}
+.common-footer img{
+    display:block;
+    max-width:100%;
+}
+.common-footer .sub-hall{
+    display:none;
+    position:absolute;
+    bottom:5rem;
+    background:#fff;
+    padding:1% 0 1% 1%;
+}
+.common-footer .sub-hall.show{
+    display:block;
+}
+.common-footer .nav-footer
+{
+    width:100%;
+}
+.common-footer .nav-footer a
+{
+    display:block;
+    float:left;
+    width:33.3%;
+}
+.common-footer .sub-hall a{
+    position:relative;
+    display:block;
+    float:left;
+    width:24%;
+    margin:0 1% 0 0;
+}
+.common-footer .sub-hall .icon-angle-down{
+    position:absolute;
+    bottom:-1.8rem;
+    right:16%;
+    display:block;
+    width:0;
+    height:0;
+    border-width:1rem 1rem 1rem 1rem;
+    border-style:solid;
+    border-color:#fff transparent transparent transparent;
+}
+/* 分会场弹出层end */
+
 /* 新人大礼包 begin */
+.bd-xinren{
+    height:auto;
+}
 .xinren header{
     position:relative;
     background:#ec005f;
@@ -86,16 +156,12 @@ img{border:none;}
 .xinren header .btn-lingqu input{
     width:100%;
     height:5rem;
-    background:url(http://211.151.52.139/BiyabiMobile/pic/images/Activity615/btn_xinren_linqu.png) no-repeat;
+    background:url(../images/btn_xinren_linqu.png) no-repeat;
     background-position:50% 50%;
     background-size:contain;
     border:none;
     outline:none;
 }
-/*.xinren .btn-lingqu>a>img{
-    width:100%;
-    max-width:100%;
-}*/
 /* 新人礼包-活动规则 */
 .xinren .rule{
     color:#e50278;
@@ -162,49 +228,6 @@ img{border:none;}
     top:73%;
     width:28%;
 }
-.bd-main footer{
-    position:relative;
-    margin:-5% 0 0 0;
-}
-.bd-main footer a>img{
-    max-width:100%;
-}
-/* 分会场遮罩层 */
-.bd-main .mask{
-    display:none;
-}
-.bd-main .mask .menu{
-    position:absolute;
-    bottom:0;
-    left:0;
-}
-.bd-main .sub-hall{
-    position:absolute;
-    bottom:10%;
-    background:#fff;
-    padding:1%;
-}
-.bd-main .sub-hall a{
-    position:relative;
-    display:block;
-    float:left;
-    width:24%;
-    margin:0 1% 0 0;
-}
-.bd-main .sub-hall a>img{
-    display:block;
-}
-.bd-main .sub-hall .icon-angle-down{
-    position:absolute;
-    bottom:-2rem;
-    right:16%;
-    display:block;
-    width:0;
-    height:0;
-    border-width:1rem 1rem 1rem 1rem;
-    border-style:solid;
-    border-color:#fff transparent transparent transparent;
-}
 /* 615主画面 end */
 
 /* 615主画面预热 begin */
@@ -233,6 +256,7 @@ img{border:none;}
 
 /* 抽奖页面 begin */
 .bd-lucky{
+    height:auto;
     background:#fd2171;
 }
 .bd-lucky .bg{
@@ -334,7 +358,7 @@ img{border:none;}
 }
 
 .cj li.adcls>div{
-    background:#fff;
+    background:#F9D214;
 }
 .bt{
     visibility:hidden;
@@ -755,7 +779,8 @@ img{border:none;}
 
 
 /* 分享邀请好友页面 begin */
-.bd-share{
+.bd-share {
+    height:auto;
     background:#fffae6;
 }
 .share{

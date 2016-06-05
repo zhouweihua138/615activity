@@ -34,64 +34,43 @@
             <p><i>8、</i>活动最终解释权归比呀比所有。</p>
         </section>
     </article>
+
+    <!--底部导航 begin -->
+    <div class="common-mask"></div>
+    <footer class="common-footer">
+        <div class="nav-footer clearfix">
+            <a href="#">
+                <img src="images/btn_main_home.png" alt="" /></a>
+            <a href="http://m.biyabi.com">
+                <img src="images/btn_main_biyabi.png" alt="" /></a>
+            <a class="btn-fenhuichang" href="javascript:;">
+                <img src="images/btn_main_fenhuichang.png" alt="" /></a>
+        </div>
+        <div class="sub-hall">
+            <a href="#">
+                <img src="images/img_main_b_choujiang.png" alt="" /></a>
+            <a href="#">
+                <img src="images/img_main_b_share.png" alt="" /></a>
+            <a href="#">
+                <img src="images/img_main_b_xinren.png" alt="" /></a>
+            <a href="#">
+                <img src="images/img_main_b_wechat.png" alt="" /></a>
+            <i class="icon-angle-down"></i>
+        </div>
+    </footer>
+    <!--底部导航 end -->
  </body>
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-
 <script>
-    var imgUrl = 'http://zhouweihua138.github.io/615activity/images/share_wechat_icon.png';  // 分享后展示的一张图片
-    var lineLink = 'http://211.151.52.139/Activity/invitation/'; // 点击分享后跳转的页面地址
-    var descContent = "会海淘的人都用免邮券来抵扣运费。";  // 分享后的描述信息
-    var shareTitle = '你有50元免邮券未领取';  // 分享后的标题
-    var appid = '';  // 应用id,如果有可以填，没有就留空
-
-    function shareFriend() {
-        WeixinJSBridge.invoke('sendAppMessage', {
-            "appid": appid,
-            "img_url": imgUrl,
-            "img_width": "200",
-            "img_height": "200",
-            "link": lineLink,
-            "desc": descContent,
-            "title": shareTitle
-        }, function (res) {
-            //_report('send_msg', res.err_msg);  // 这是回调函数，必须注释掉
-        })
-    }
-    function shareTimeline() {
-        WeixinJSBridge.invoke('shareTimeline', {
-            "img_url": imgUrl,
-            "img_width": "200",
-            "img_height": "200",
-            "link": lineLink,
-            "desc": descContent,
-            "title": shareTitle
-        }, function (res) {
-            //_report('timeline', res.err_msg); // 这是回调函数，必须注释掉
+    $(function () {
+        //有底部导航的页面公用js begin
+        $("body").css("padding-bottom", $(".common-footer").height() - 20);  //设置body底部填充底部导航的高度
+        //分会场按钮触摸点击
+        $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
+            $(".common-mask,.common-footer .sub-hall").toggleClass("show");
         });
-    }
-    function shareWeibo() {
-        WeixinJSBridge.invoke('shareWeibo', {
-            "content": descContent,
-            "url": lineLink,
-        }, function (res) {
-            //_report('weibo', res.err_msg);
-        });
-    }
-    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-        // 发送给好友
-        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-            shareFriend();
-        });
-        // 分享到朋友圈
-        WeixinJSBridge.on('menu:share:timeline', function (argv) {
-            shareTimeline();
-        });
-        // 分享到微博
-        WeixinJSBridge.on('menu:share:weibo', function (argv) {
-            shareWeibo();
-        });
-    }, false);
+        //有底部导航的页面公用js end
+    });
 </script>
  </html>
