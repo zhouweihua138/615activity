@@ -1,20 +1,3 @@
-$(function () {
-    $(document).on("click",".btn-run",function () {
-        var num = Math.floor(Math.random() * 10 + 1);
-        num = 6;
-        var cjCopy = $(".cj").clone();
-        $(".cj").remove();
-        cjCopy.insertAfter(".cj-box .bg");
-        $(".cj").luckDraw({
-            line: 3, //几行
-            list: 4, //几列
-            click: ".bt", //点击对象
-            stime: num
-        })
-        $(".bt").click();
-    });
-});
-
 $.fn.extend({
     luckDraw: function (data) {
 		var anc = $(this); //祖父元素

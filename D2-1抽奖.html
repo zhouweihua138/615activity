@@ -44,7 +44,7 @@
     <!--抽奖信息 begin-->
     <div class="cj-info">
         <p>
-        今日剩余次数：<span>3</span>次,<a href="javascript:void(0);">点击分享加次数>></a></p>
+        今日剩余次数：<span>3</span>次,<a href="D3-1.html">点击分享加次数>></a></p>
         <div class="record">
             <h1>领取记录</h1>
             <div class="record-list">
@@ -256,6 +256,22 @@
                 $this.height((recordLi.height() + parseInt(recordLi.css("padding-top")) * 2) * 4);
             }
 
+            //抽奖
+            $(document).on("click", ".btn-run", function () {
+                var num = Math.floor(Math.random() * 10 + 1);
+                num = 4;
+                var cjCopy = $(".cj").clone();
+                $(".cj").remove();
+                cjCopy.insertAfter(".cj-box .bg");
+                $(".cj").luckDraw({
+                    line: 3, //几行
+                    list: 4, //几列
+                    click: ".bt", //点击对象
+                    stime: num
+                })
+                $(".bt").click();
+            });
+
             //领取记录滚动
             var scrollTimer;
             $this.hover(function () {
@@ -293,7 +309,11 @@
             //关闭弹窗
             $(document).on("touchstart", ".bd-lucky .popup .btn-close", function () {
                 $(this).parents(".popup").css("visibility", "hidden");
-                $(".mask").css("visibility", "hidden");
+                $(".mask").css({"transition":"all .8s ease","opacity":"0"});
+                setTimeout(function () {
+                    $(".mask").css({ "visibility": "hidden"});  //防止点击关闭按钮时按到其他按钮
+                    $(".mask").css({"transition":"none","opacity": "1" });
+                }, 1000);
             });
         });
 
