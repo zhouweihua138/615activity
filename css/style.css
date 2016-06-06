@@ -196,7 +196,7 @@ img{border:none;}
     display:block;
     width:100%;
 }
-.bd-main .content-box{
+/*.bd-main .content-box{
     position:absolute;
     left:0;
     top:0;
@@ -227,6 +227,44 @@ img{border:none;}
     right:0;
     top:73%;
     width:28%;
+}*/
+
+.bd-main .m-left,
+.bd-main .m-right{
+    width:50%;
+}
+.bd-main .m-left div,
+.bd-main .m-right div{
+    position:relative;
+}
+.bd-main .m-left div a,
+.bd-main .m-right div a{
+    position:absolute;
+}
+.bd-main .m-left div  a img,
+.bd-main .m-right div  a img{
+    display:block;
+    max-width:100%;
+}
+.bd-main .go-choujiang{
+    left: 2%;
+    top: 0;
+    width: 75%;
+}
+.bd-main .go-share{
+    right: 0;
+    top: 8%;
+    width: 87%;
+}
+.bd-main .go-xinren{
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.bd-main .go-wechat{
+    right: 0;
+    top: 0;
+    width: 58%;
 }
 /* 615主画面 end */
 
