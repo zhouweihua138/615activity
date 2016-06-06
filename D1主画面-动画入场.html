@@ -9,15 +9,9 @@
 </head>
 <body class="bd-main">
     <div class="fw">
-        <div>
-            <img class="bg" src="images/bg_main_01.png" alt=""/>
-        </div>
-        <div>
-            <img class="bg" src="images/bg_main_02.png" alt=""/>
-        </div>
-        <div>
-            <img class="bg" src="images/bg_main_03.png" alt=""/>
-        </div>
+        <img class="bg" src="images/bg_main_01.png" alt=""/>
+        <img class="bg" src="images/bg_main_02.png" alt=""/>
+        <img class="bg" src="images/bg_main_03.png" alt=""/>
         <div class="content-box">
             <a class="go-choujiang" href="D2-1抽奖.html">
                 <img src="images/img_main_choujiang.png" alt="" />
@@ -61,7 +55,11 @@
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script>
     $(function () {
-        var timeout = setTimeout(setHeight, 500);
+        $(".bd-main .fw .bg").load(function () {
+            //设置绝对定位的内容框的高度与背景高度一致
+            setHeight();
+        });
+
         function setHeight() {
             $(".bd-main .content-box").css("height", $(".bd-main .fw").height());  //设置绝对定位的内容框的高度与背景高度一致
             $(".bd-main .go-choujiang").css({ "top": "33%" });

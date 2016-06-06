@@ -42,11 +42,19 @@
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script>
     $(function () {
-        //设置绝对定位的内容框的高度与背景高度一致
-        $(".bd-main .content-box").css("height", $(".bd-main .fw").height());
-        $(window).on("resize",function () {
+        $(".bd-main .fw .bg").load(function () {
+            //设置绝对定位的内容框的高度与背景高度一致
+            setElHeight();
+        });
+
+        $(window).on("resize", function () {
+            setElHeight();
+        });
+
+        function setElHeight() {
+            //设置绝对定位的内容框的高度与背景高度一致
             $(".bd-main .content-box").css("height", $(".bd-main .fw").height());
-        })
+        }
     });
 </script>
  </html>
