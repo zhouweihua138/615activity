@@ -152,7 +152,7 @@
 <script>
     $(function () {
         //活动未开始提示
-        $(document).on("touchstart", ".go-choujiang, .go-xinren, .go-share", function () {
+        $(document).on("touchend", ".go-choujiang, .go-xinren, .go-share", function () {
             $(".alert-dialog-box").css({ "display": "block" });
         })
         //弹出框“好”按钮
