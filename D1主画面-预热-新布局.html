@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>615海外购狂欢</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body class="bd-main">
+    <div class="fw">        
+        <img class="bg" src="images/bg_main_top.jpg" alt=""/>
+        <div class="clearfix">
+        	<div class="m-left pull-left">
+                <div>
+                    <img class="bg" src="images/bg_main_left1.jpg" alt=""/>
+                    <a class="go-choujiang" href="javascript:;">
+                        <img src="images/img_main_choujiang_yure.png" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <img class="bg" src="images/bg_main_left2.jpg" alt=""/>
+                    <a class="go-xinren" href="javascript:;">
+                        <img src="images/img_main_xinren_yure.png" alt="" />
+                    </a>
+                </div>
+        	</div>
+        	<div class="m-right pull-right">
+                <div>
+                    <img class="bg" src="images/bg_main_right1.jpg" alt=""/>
+                    <a class="go-share" href="javascript:;">
+                        <img src="images/img_main_share_yure.png" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <img class="bg" src="images/bg_main_right2.jpg" alt=""/>
+                    <a class="go-wechat" href="#">
+                        <img src="images/img_main_wechat.png" alt="" />
+                    </a>
+                </div>
+        	</div>
+        </div>
+    </div>
+    
+    <div class="common-mask"></div>
+    <footer class="common-footer">
+        <div class="nav-footer clearfix">
+            <a href="D1主画面-全新布局.html">
+                <img src="images/btn_main_home.png" alt="" /></a>
+            <a href="http://m.biyabi.com">
+                <img src="images/btn_main_biyabi.png" alt="" /></a>
+            <a class="btn-fenhuichang" href="javascript:;">
+                <img src="images/btn_main_fenhuichang.png" alt="" /></a>
+        </div>
+        <div class="sub-hall">
+            <a class="no-open" href="#">
+                <img src="images/img_main_b_choujiang.png" alt="" />
+                <div class="black-layer" style="display:block">
+                    <div class="ub">敬请<br />期待</div>
+                </div>
+            </a>
+            <a class="no-open" href="#">
+                <img src="images/img_main_b_share.png" alt="" />
+                <div class="black-layer" style="display:block">
+                    <div class="ub">敬请<br />期待</div>
+                </div>
+            </a>
+            <a class="no-open" href="#">
+                <img src="images/img_main_b_xinren.png" alt="" />
+                <div class="black-layer" style="display:block">
+                    <div class="ub">敬请<br />期待</div>
+                </div>
+            </a>
+            <a href="#">
+                <img src="images/img_main_b_wechat.png" alt="" /></a>
+            <i class="icon-angle-down"></i>
+        </div>
+    </footer>
+ </body>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+    $(function () {
+        $(document).on("touchstart", ".go-choujiang, .go-xinren, .go-share", function () {
+            alert("6月15日10:00准时开始，敬请期待");
+        })
+        //有底部导航的页面公用js begin
+        $("body").css("padding-bottom",$(".common-footer").height()-20);  //设置body底部填充底部导航的高度
+        //分会场按钮触摸点击
+        $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
+            $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+        });
+        //有底部导航的页面公用js end
+    });
+</script>
+ </html>

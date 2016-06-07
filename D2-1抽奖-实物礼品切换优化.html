@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>抽奖活动</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style>
+    .backend {
+        opacity:0.8;
+    }
+</style>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jq.orbit2.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body class="bd-lucky">
+    <header>
+        <img class="bg" src="images/bg_cj_top3.png" alt="" />
+    </header>
+
+    <!--抽奖转盘 begin-->
+    <div class="cj-box">
+        <img class="bg" src="images/bg_cj_zhuanpan.png" alt="" />        
+	    <ul id="cj-a" class="cj ten-item clearfix">
+		    <li><div><img src="images/img_cj_jinbi_50_100.png" alt="100枚金币" />100枚金币</div></li>
+		    <li><div><img src="images/img_cj_myq_20.png" alt="20免邮券" />20免邮券</div></li>
+		    <li><div><img src="images/img_cj_myq_50.png" alt="50免邮券" />50免邮券</div></li>
+		    <li><div><img src="images/img_cj_xxcy.png" alt="谢谢参与！" />谢谢参与！</div></li>
+		    <li><div><img src="images/img_cj_jinbi_50_100.png" alt="50枚金币" />50枚金币</div></li>
+		    <li><div><img src="images/img_cj_smdl.png" alt="神秘大礼" />神秘大礼</div></li>
+		    <li><div><img src="images/img_cj_jinbi_20.png" alt="20枚金币" />20枚金币</div></li>
+		    <li><div><img src="images/img_cj_myq_100.png" alt="100免邮券" />100免邮券</div></li>
+		    <li><div><img src="images/img_cj_xxcy.png" alt="谢谢参与！" />谢谢参与！</div></li>
+		    <li><div><img src="images/img_cj_smdl.png" alt="神秘大礼" />神秘大礼</div></li> 
+            <div class="bt"></div>
+            <a class="btn-run" href="javascript:;">
+                <div class="btn-bg ub">
+                    <img src="images/btn_cj_text.png" alt="立即抽奖" />
+                </div>
+            </a>
+	    </ul>
+    </div>
+    <!--抽奖转盘 end-->
+
+    <!--抽奖信息 begin-->
+    <div class="cj-info">
+        <p>
+        今日剩余次数：<span>3</span>次,<a href="D3-1.html">点击分享加次数>></a></p>
+        <div class="record">
+            <h1>领取记录</h1>
+            <div class="record-list">
+                <ul>
+                    <li class="ub">
+                        <img src="images/img_cj_record_face.png" alt="" />
+                        <div class="ub-f1">
+                            <p>恭喜斯洛克<span class="pull-right">1小时前</span></p>
+                            <p>抽中了神秘大礼-AIRMAX气垫透气网鞋子</p>
+                        </div>
+                    </li>
+                    <li class="ub">
+                        <img src="images/img_cj_record_face.png" alt="" />
+                        <div class="ub-f1">
+                            <p>恭喜斯洛克<span class="pull-right">1小时前</span></p>
+                            <p>抽中了神秘大礼-AIRMAX气垫透气网鞋子</p>
+                        </div>
+                    </li>
+                    <li class="ub">
+                        <img src="images/img_cj_record_face.png" alt="" />
+                        <div class="ub-f1">
+                            <p>恭喜斯洛克<span class="pull-right">1小时前</span></p>
+                            <p>抽中了神秘大礼-AIRMAX气垫透气网鞋子</p>
+                        </div>
+                    </li>
+                    <li class="ub">
+                        <img src="images/img_cj_record_face.png" alt="" />
+                        <div class="ub-f1">
+                            <p>恭喜斯洛克<span class="pull-right">1小时前</span></p>
+                            <p>抽中了神秘大礼-AIRMAX气垫透气网鞋子</p>
+                        </div>
+                    </li>
+                    <li class="ub">
+                        <img src="images/img_cj_record_face.png" alt="" />
+                        <div class="ub-f1">
+                            <p>恭喜斯洛克<span class="pull-right">1小时前</span></p>
+                            <p>抽中了神秘大礼-AIRMAX气垫透气网鞋子</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--抽奖信息 end-->
+
+    <img class="bg" src="images/bg_cj_middle.png" alt="" />
+
+    <!--参与规则 begin-->
+    <div class="rule">
+        <h1 class="text-danger">参与规则</h1>
+        <p class="text-red"><i>1、</i>金币：可用于兑换比呀比海外购平台的免邮券。<br />
+            免邮券：可在下单时直接抵扣国际运费。<br />
+            神秘大礼：豪华实体奖品，比呀比免费送给你。礼品有GUESS钱包、Levi's 皮带、西铁城手表、露华浓口红、胡子奶嘴等十几款产品。</p>
+        <p class="text-red"><i>2、</i>活动时间：2016年6月15日至2016年6月25日，为期10天。</p>
+        <p><i>3、</i>参与方法：点击抽奖盘中的“立即抽奖”即可参与。</p>
+        <p><i>4、</i>参与次数：每个ID每天可以抽奖3次。</p>
+        <p><i>5、</i>点击“分享加次数”（仅限微信），可再获得一次抽奖机会，最多能获得两次机会。</p>
+        <p><i>6、</i>特别说明：抽奖获得的优惠券使用期限截止到2016年6月30 日23:59，详情可查看个人中心中的“优惠券”，请注意时间使用。</p>
+        <p><i>7、</i>免邮券使用：每笔订单限用一张免邮券。不挂失，不合并，不找零，不兑换现金。</p>
+        <p><i>8、</i>退款说明：活动期间内，若订单取消，将退还您在交易中实际支付的金额，免邮券自动返还到个人账户内，还可以继续使用。</p>
+        <p><i>9、</i>活动最终解释权归比呀比所有。</p>
+    </div>
+    <!--参与规则 end-->
+    
+    <!--抽奖弹窗 begin-->
+    <div class="mask hidden" style="visibility: visible;">
+        <!-- 金币和优惠券类型弹窗 begin-->
+    	<div class="popup popup1 hidden">
+            <div class="popup-inner">
+                <img class="bg" src="images/img_cj_popup_top.png" alt="恭喜您！！" />
+                <div class="content-box box-small">
+                    <img src="images/img_cj_popup_jinbi.png" alt="金币" />
+                    <p>获得100枚金币</p>
+                    <a class="btn-red" href="#">立即兑换</a>
+                </div>
+                <a class="btn-close ub" href="javascript:;">
+                    <img src="images/img_cj_popup_close.png" alt="关闭" /></a>
+            </div>
+    	</div>
+        <!-- 金币和优惠券类型弹窗 end-->
+
+        <!-- 神秘大礼弹窗 begin-->
+    	<div class="popup popup2 hidden" style="visibility: visible;">
+            <div class="popup-inner">
+                <img class="bg" src="images/img_cj_popup_top.png" alt="恭喜您！！" />
+                <ul class="gift-list">
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_01.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_02.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_03.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_04.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_05.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_06.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-box">
+                            <div class="img-outer-box">
+                                <div class="img-box">
+                                    <img src="images/img_gift_07.jpg" alt="Baby Aspen飞行员连体套装礼盒" />
+                                </div>
+                            </div>
+                            <p>Baby Aspen飞行员连体套装礼盒</p>
+                            <a class="btn-red" href="#">领取礼物</a>
+                        </div>
+                    </li>
+                </ul>
+                <a class="btn-pre" href="javascript:;">
+                    <img src="images/img_cj_popup_angle_left.png" alt="上一个" /></a>
+                <a class="btn-next" href="javascript:;">
+                    <img src="images/img_cj_popup_angle_right.png" alt="下一个" /></a>
+                <a class="btn-close ub" href="javascript:;">
+                    <img src="images/img_cj_popup_close.png" alt="关闭" /></a>
+            </div>
+    	</div>
+        <!-- 神秘大礼弹窗 end-->
+    </div>
+    <!--抽奖弹窗 end-->
+    
+    <!--底部导航 begin -->
+    <div class="common-mask"></div>
+    <footer class="common-footer">
+        <div class="nav-footer clearfix">
+            <a href="D1主画面-全新布局.html">
+                <img src="images/btn_main_home.png" alt="" /></a>
+            <a href="http://m.biyabi.com">
+                <img src="images/btn_main_biyabi.png" alt="" /></a>
+            <a class="btn-fenhuichang" href="javascript:;">
+                <img src="images/btn_main_fenhuichang.png" alt="" /></a>
+        </div>
+        <div class="sub-hall">
+            <a href="#">
+                <img src="images/img_main_b_choujiang.png" alt="" /></a>
+            <a href="#">
+                <img src="images/img_main_b_share.png" alt="" /></a>
+            <a href="#">
+                <img src="images/img_main_b_xinren.png" alt="" /></a>
+            <a href="#">
+                <img src="images/img_main_b_wechat.png" alt="" /></a>
+            <i class="icon-angle-down"></i>
+        </div>
+    </footer>
+    <!--底部导航 end -->
+
+    <script>
+        $(function () {
+            var $this = $(".record-list"); 
+            var timeout = setTimeout(setElSize, 500);
+            function setElSize() {
+                $(".bd-lucky .popup2 ul").height($(".bd-lucky .popup2 ul li").height()); //设置弹窗礼物的高度v
+                var recordLi = $this.find("li");
+                $this.height((recordLi.height() + parseInt(recordLi.css("padding-top")) * 2) * 4);
+            }
+
+            //抽奖
+            $(document).on("click", ".btn-run", function () {
+                var num = Math.floor(Math.random() * 10 + 1);
+                num = 6;
+                var cjCopy = $(".cj").clone();
+                $(".cj").remove();
+                cjCopy.insertAfter(".cj-box .bg");
+                $(".cj").luckDraw({
+                    line: 3, //几行
+                    list: 4, //几列
+                    click: ".bt", //点击对象
+                    stime: num
+                })
+                $(".bt").click();
+            });
+
+            //领取记录滚动
+            var scrollTimer;
+            $this.hover(function () {
+                clearInterval(scrollTimer);
+            }, function () {
+                scrollTimer = setInterval(function () {
+                    scrollNews($this);
+                }, 2000);
+            }).trigger("mouseout");
+
+
+            //有底部导航的页面公用js begin
+            $("body").css("padding-bottom", $(".common-footer").height() - 20);  //设置body底部填充底部导航的高度
+            //分会场按钮触摸点击
+            $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
+                $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+            });
+            //有底部导航的页面公用js end
+
+            //弹窗神秘大礼滚动切换
+            $('.gift-list').orbit({
+                frontendLeft: 0,  //front left
+                backendTop: "10%", //backend Img  1 Position
+                backendLeft: "-90%", //backend Img  1 left
+                backendLeft3: "90%", //backend Img  1 rgiht
+                backendTop2: "0", // backend Img Position 2      
+                backendLeft4: "-200%", // backend Img Position right 
+                backendLeft2: 0, //backend Img Position left
+                backendClass: "backend"
+            });
+
+            //关闭弹窗
+            $(document).on("touchstart", ".bd-lucky .popup .btn-close", function () {
+                $(this).parents(".popup").css("visibility", "hidden");
+                $(".mask").css({"transition":"all .8s ease","opacity":"0"});
+                setTimeout(function () {
+                    $(".mask").css({ "visibility": "hidden"});  //防止点击关闭按钮时按到其他按钮
+                    $(".mask").css({"transition":"none","opacity": "1" });
+                }, 1000);
+            });
+        });
+
+        //领取记录滚动
+        function scrollNews(obj) {
+            var $self = obj.find("ul:first");
+            var lineHeight = $self.find("li:first").height() + parseInt($self.find("li:first").css("padding"))*2;
+            $self.animate({ "margin-top": -lineHeight + "px" }, 800, function () {
+                $self.css({ "margin-top": "0px" }).find("li:first").appendTo($self);
+            })
+        }
+
+    </script>
+ </body>
+ </html>
