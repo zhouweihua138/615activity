@@ -4,8 +4,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <title>615海外购狂欢</title>
-
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />    
+    <style>
+        .alert-dialog-mask{
+            position:fixed;
+            left:0;
+            top:0;
+            display:none;
+            width:100%;
+            height:100%;
+            background:#000;
+            opacity:0.2;
+        }
+        .alert-dialog {
+            position:absolute;
+            top:30%;
+            left:10%;
+            display:none;
+            width:80%;
+            background:#fff;
+            text-align:center;
+            font-size:16px;
+            border-radius:5px;
+        }
+        .alert-dialog .content {
+            padding:2rem;
+        }
+        .alert-dialog p{
+            width:100%;
+        }
+        .alert-dialog .btn-row{
+            border-top:1px solid #d7d7d7;
+        }
+        .alert-dialog .btn{
+            display:block;
+            width:100%;
+            padding:1rem 0;
+            font-size:18px;
+            font-weight:600;
+            color:#188CFF;
+        }
+    </style>
 </head>
 <body class="bd-main">
     <div class="fw">        
@@ -76,14 +115,30 @@
             <i class="icon-angle-down"></i>
         </div>
     </footer>
+        
+    <div class="alert-dialog-mask"></div>
+    <div class="alert-dialog">
+        <div class="content">
+        <p>6月15日10:00准时开始，敬请期待</p></div>
+        <div class="btn-row">
+            <a class="btn btn-ok" href="javascript:;">好</a>
+        </div>
+    </div>
  </body>
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script>
     $(function () {
+        //活动未开始提示
         $(document).on("touchstart", ".go-choujiang, .go-xinren, .go-share", function () {
-            alert("6月15日10:00准时开始，敬请期待");
+            $(".alert-dialog-mask,.alert-dialog").css({ "display": "block" });
         })
+        //弹出框“好”按钮
+        $(document).on("touchstart", ".alert-dialog .btn-ok", function () {
+            $(".alert-dialog-mask, .alert-dialog").css({ "display": "none" });
+        });
+
+
         //有底部导航的页面公用js begin
         $("body").css("padding-bottom",$(".common-footer").height()-20);  //设置body底部填充底部导航的高度
         //分会场按钮触摸点击
