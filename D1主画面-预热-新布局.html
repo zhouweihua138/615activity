@@ -94,8 +94,10 @@
 <script>
     $(function () {
         //活动未开始提示
+        $(document).on("click",".go-choujiang,.go-xinren,.go-share", function (ev) {
+            openAlert();
+        });
         touch.on(".go-choujiang,.go-xinren,.go-share", "tap doubletap", function (ev) {
-            console.log(ev.type);
             openAlert();
         });
         function openAlert() {
@@ -122,9 +124,15 @@
             $(".common-mask").hasClass("show") ? $("body").on("touchmove", function (e) { e.preventDefault(); }) : $("body").off("touchmove");
         });
         $(document).on("click", ".common-mask,.common-footer .sub-hall .no-open", function () {
+            closeMask();
+        });
+        touch.on(".common-mask,.common-footer .sub-hall .no-open", "tap doubletap", function (ev) {
+            closeMask();
+        });
+        function closeMask() {
             $(".common-mask,.common-footer .sub-hall").toggleClass("show");
             $("body").off("touchmove");
-        });
+        }
         //有底部导航的页面公用js end
     });
 </script>
