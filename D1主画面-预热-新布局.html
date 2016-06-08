@@ -143,13 +143,17 @@
     $(function () {
         //活动未开始提示
         $(document).on("click", ".go-choujiang, .go-xinren, .go-share", function () {
-            $(".alert-dialog-box").css({"opacity": "1", "visibility": "visible" });
+            $(".alert-dialog-box").css({ "opacity": "1", "visibility": "visible" }).addClass("show");  //弹出提示框
+            $("body").on("touchmove", function (e) {
+                e.preventDefault();
+            });
         })
-        //弹出框“好”按钮
+        //提示框“好”按钮关闭提示框
         $(document).on("touchstart", ".alert-dialog .btn-ok", function () {
-            $(".alert-dialog-box").css({ "-webkit-transition": "all .8s ease", "transition": "all .8s ease", "opacity": "0" });
+            $(".alert-dialog-box").css({ "-webkit-transition": "all .8s ease", "transition": "all .8s ease", "opacity": "0" }).removeClass("show");
+            $("body").off("touchmove");
             setTimeout(function () {
-                $(".alert-dialog-box").css({ "visibility": "hidden" });  //防止点击关闭按钮时按到其他按钮
+                $(".alert-dialog-box").css({ "visibility": "hidden" });  //防止点击“好”关闭按钮时按到其他按钮
                 $(".alert-dialog-box").css({ "-webkit-transition": "none", "transition": "none", "opacity": "1" });
             }, 800);
         });
@@ -159,11 +163,11 @@
         //分会场按钮触摸点击
         $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
             $(".common-mask,.common-footer .sub-hall").toggleClass("show");
-            $(".common-mask").hasClass("show") ? $("html,body").css({ "overflow": "hidden" }) : $("html,body").css({ "overflow": "visible" })
+            $(".common-mask").hasClass("show") ? $("body").on("touchmove", function (e) { e.preventDefault(); }) : $("body").off("touchmove");
         });
         $(document).on("click", ".common-mask,.common-footer .sub-hall .no-open", function () {
             $(".common-mask,.common-footer .sub-hall").toggleClass("show");
-            $("html,body").css({ "overflow": "visible" });
+            $("body").off("touchmove");
         });
         //有底部导航的页面公用js end
     });
