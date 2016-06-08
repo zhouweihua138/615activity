@@ -123,6 +123,7 @@
             $(".common-mask,.common-footer .sub-hall").toggleClass("show");
             $(".common-mask").hasClass("show") ? $("body").on("touchmove", function (e) { e.preventDefault(); }) : $("body").off("touchmove");
         });
+        //关闭分会场弹出层
         $(document).on("click", ".common-mask,.common-footer .sub-hall .no-open", function () {
             closeMask();
         });
@@ -130,7 +131,7 @@
             closeMask();
         });
         function closeMask() {
-            $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+            $(".common-mask,.common-footer .sub-hall").removeClass("show");
             $("body").off("touchmove");
         }
         //有底部导航的页面公用js end
