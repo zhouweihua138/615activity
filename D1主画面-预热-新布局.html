@@ -124,17 +124,7 @@
             <i class="icon-angle-down"></i>
         </div>
     </footer>
-        
-    <!-- <div class="alert-dialog-mask"></div>
-    <div class="alert-dialog">
-        <div class="content">
-        <p>6月15日10:00准时开始，敬请期待</p></div>
-        <div class="btn-row">
-            <a class="btn btn-ok" href="javascript:;">好</a>
-        </div>
-    </div>
-    --> 
-    
+
     <div class="alert-dialog-box">
         <div class="alert-dialog-mask"></div>
         <div class="alert-dialog">
@@ -152,7 +142,7 @@
 <script>
     $(function () {
         //活动未开始提示
-        $(document).on("touchend", ".go-choujiang, .go-xinren, .go-share", function () {
+        $(document).on("click", ".go-choujiang, .go-xinren, .go-share", function () {
             $(".alert-dialog-box").css({ "display": "block" });
         })
         //弹出框“好”按钮
