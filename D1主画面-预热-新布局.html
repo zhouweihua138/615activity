@@ -90,11 +90,14 @@
  </body>
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="js/touch-0.2.14.min.js"></script>
 <script>
     $(function () {
         //活动未开始提示
-        $(document).on("click", ".go-choujiang, .go-xinren, .go-share", openAlert());
-        touch.on('.go-choujiang, .go-xinren, .go-share', 'doubletap', openAlert());
+        touch.on(".go-choujiang,.go-xinren,.go-share", "tap doubletap", function (ev) {
+            console.log(ev.type);
+            openAlert();
+        });
         function openAlert() {
             $(".alert-dialog-box").css({ "opacity": "1", "visibility": "visible" }).addClass("show");  //弹出提示框
             $("body").on("touchmove", function (e) {
