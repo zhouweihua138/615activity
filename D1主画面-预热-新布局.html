@@ -10,10 +10,10 @@
             position:fixed;
             left:0;
             top:0;
-            display:none;
             width:100%;
             height:100%;
             overflow:hidden;
+            visibility:hidden;
         }
         .alert-dialog-mask{
             position:absolute;
@@ -143,19 +143,23 @@
     $(function () {
         //活动未开始提示
         $(document).on("click", ".go-choujiang, .go-xinren, .go-share", function () {
-            $(".alert-dialog-box").css({ "display": "block" });
+            $(".alert-dialog-box").css({"opacity": "1", "visibility": "visible" });
         })
         //弹出框“好”按钮
         $(document).on("touchstart", ".alert-dialog .btn-ok", function () {
-            $(".alert-dialog-box").css({ "display": "none" });
+            $(".alert-dialog-box").css({ "transition": "all .8s ease", "opacity": "0" });
+            setTimeout(function () {
+                $(".alert-dialog-box").css({ "visibility": "hidden" });  //防止点击关闭按钮时按到其他按钮
+                $(".alert-dialog-box").css({ "transition": "none", "opacity": "1" });
+            }, 800);
         });
-
 
         //有底部导航的页面公用js begin
         $("body").css("padding-bottom",$(".common-footer").height()-20);  //设置body底部填充底部导航的高度
         //分会场按钮触摸点击
         $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
             $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+            $("html,body").css({"overflow":"hidden"});
         });
         //有底部导航的页面公用js end
     });

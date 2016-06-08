@@ -190,7 +190,7 @@ img{border:none;}
 
 /* 615主画面 begin */
 .bd-main{
-    height:auto;
+    /*height:auto;*/
 }
 .bd-main .bg{
     display:block;
