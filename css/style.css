@@ -21,13 +21,14 @@ img{border:none;}
 
 /* 分会场弹出层begin */
 .common-mask{
-    display:none;
+    /*display:none;*/
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.6);
+    visibility:hidden;
 }
 .common-mask.show{
     display:block;

@@ -107,9 +107,6 @@
             });
         }
         //提示框“好”按钮关闭提示框
-        //$(document).on("click", ".alert-dialog .btn-ok", function () {
-        //    closeAlert();
-        //});
         touch.on(".alert-dialog .btn-ok", "tap doubletap", function (ev) {
             closeAlert();
         });
@@ -119,15 +116,22 @@
             setTimeout(function () {
                 $(".alert-dialog-box").css({ "visibility": "hidden" });  //防止点击“好”关闭按钮时按到其他按钮
                 $(".alert-dialog-box").css({ "-webkit-transition": "none", "transition": "none", "opacity": "1" });
-            }, 500);
+            }, 400);
         }
 
         //有底部导航的页面公用js begin
         $("body").css("padding-bottom",$(".common-footer").height()-20);  //设置body底部填充底部导航的高度
         //分会场按钮点击
         $(document).on("click", ".common-footer .btn-fenhuichang", function () {
-            $(".common-mask,.common-footer .sub-hall").toggleClass("show");
-            $(".common-mask").hasClass("show") ? $("body").on("touchmove", function (e) { e.preventDefault(); }) : $("body").off("touchmove");
+            if ($(".common-mask").hasClass("show")) {
+                closeMask();
+                $(".common-mask,.common-footer .sub-hall").removeClass("show");
+                $("body").off("touchmove");
+            } else {
+                $(".common-mask").css({ "opacity": "1", "visibility": "visible" });
+                $(".common-mask,.common-footer .sub-hall").addClass("show");
+                $("body").on("touchmove", function (e) { e.preventDefault(); });
+            }
         });
         //关闭分会场弹出层
         $(document).on("click", ".common-mask,.common-footer .sub-hall .no-open", function () {
@@ -137,6 +141,12 @@
             closeMask();
         });
         function closeMask() {
+            $(".common-mask").css({ "-webkit-transition": "all .5s ease", "transition": "all .5s ease", "opacity": "0" });
+            setTimeout(function () {
+                $(".common-mask").css({ "visibility": "hidden" });  //防止点击关闭分会场弹出层时按到其他按钮
+                $(".common-mask").css({ "-webkit-transition": "none", "transition": "none", "opacity": "1" });
+            }, 400);
+
             $(".common-mask,.common-footer .sub-hall").removeClass("show");
             $("body").off("touchmove");
         }
