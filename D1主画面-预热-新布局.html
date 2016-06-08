@@ -93,12 +93,14 @@
 <script>
     $(function () {
         //活动未开始提示
-        $(document).on("click", ".go-choujiang, .go-xinren, .go-share", function () {
+        $(document).on("click", ".go-choujiang, .go-xinren, .go-share", openAlert());
+        touch.on('.go-choujiang, .go-xinren, .go-share', 'doubletap', openAlert());
+        function openAlert() {
             $(".alert-dialog-box").css({ "opacity": "1", "visibility": "visible" }).addClass("show");  //弹出提示框
             $("body").on("touchmove", function (e) {
                 e.preventDefault();
             });
-        })
+        }
         //提示框“好”按钮关闭提示框
         $(document).on("click", ".alert-dialog .btn-ok", function () {
             $(".alert-dialog-box").css({ "-webkit-transition": "all .8s ease", "transition": "all .8s ease", "opacity": "0" }).removeClass("show");
