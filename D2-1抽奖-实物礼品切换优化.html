@@ -251,8 +251,21 @@
     </footer>
     <!--底部导航 end -->
 
+    <script src="js/touch-0.2.14.min.js"></script>
     <script>
         $(function () {
+            touch.on(".bd-lucky .popup2 ul li", "touchstart", function (ev) {
+                ev.preventDefault();
+            });
+            touch.on(".bd-lucky .popup2 ul li", "swiperight", function (ev) {
+                $('.bd-lucky .popup2 .btn-pre').click();
+                console.log("向右滑动");
+            });
+            touch.on(".bd-lucky .popup2 ul li", "swipeleft", function (ev) {
+                $('.bd-lucky .popup2 .btn-next').click();
+                console.log("向左滑动");
+            });
+
             var $this = $(".record-list"); 
             var timeout = setTimeout(setElSize, 500);
             function setElSize() {

@@ -502,6 +502,7 @@ img{border:none;}
     -webkit-transition:all .5s ease;
     -moz-transition:all .5s ease;
     transition:all .5s ease;
+    z-index:99;
 }
 /* 抽奖结果弹窗 */
 .bd-lucky .popup{
@@ -572,7 +573,7 @@ img{border:none;}
 }
 /* 神秘大礼弹窗 */
 .bd-lucky .popup2{
-    top:18%;
+    top:8%;
 }
 .bd-lucky .popup2
 {
@@ -598,7 +599,8 @@ img{border:none;}
 .bd-lucky .popup2 .btn-next{
     position:absolute;
     top:40%;
-    width:8%;
+    width:19%;
+    padding:10% 6%;
     z-index:999;
 }
 .bd-lucky .popup2 .btn-pre img,
@@ -606,10 +608,10 @@ img{border:none;}
     width:100%;
 }
 .bd-lucky .popup2 .btn-pre{
-    left:-10%;
+    left:-19%;
 }
 .bd-lucky .popup2 .btn-next{
-    right:-10%;
+    right:-19%;
 }
 .visible
 {

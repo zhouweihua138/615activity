@@ -245,9 +245,21 @@
         </div>
     </footer>
     <!--底部导航 end -->
-
+    <script src="js/touch-0.2.14.min.js"></script>
     <script>
         $(function () {
+            touch.on(".bd-lucky .popup2 ul li", "touchstart", function (ev) {
+                ev.preventDefault();
+            });
+            touch.on(".bd-lucky .popup2 ul li", "swiperight", function (ev) {
+                $('.bd-lucky .popup2 .btn-pre').click();
+                console.log("向右滑动");
+            });
+            touch.on(".bd-lucky .popup2 ul li", "swipeleft", function (ev) {
+                $('.bd-lucky .popup2 .btn-next').click();
+                console.log("向左滑动");
+            });
+
             var $this = $(".record-list"); 
             var timeout = setTimeout(setElSize, 500);
             function setElSize() {
@@ -285,9 +297,14 @@
 
             //有底部导航的页面公用js begin
             $("body").css("padding-bottom", $(".common-footer").height() - 20);  //设置body底部填充底部导航的高度
-            //分会场按钮触摸点击
-            $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
+            //分会场按钮点击
+            $(document).on("click", ".common-footer .btn-fenhuichang", function () {
                 $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+                $(".common-mask").hasClass("show") ? $("body").on("touchmove", function (e) { e.preventDefault(); }) : $("body").off("touchmove");
+            });
+            $(document).on("click", ".common-mask,.common-footer .sub-hall .no-open", function () {
+                $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+                $("body").off("touchmove");
             });
             //有底部导航的页面公用js end
 
@@ -307,7 +324,7 @@
             });
 
             //关闭弹窗
-            $(document).on("touchstart", ".bd-lucky .popup .btn-close", function () {
+            $(document).on("click", ".bd-lucky .popup .btn-close", function () {
                 $(this).parents(".popup").css("visibility", "hidden");
                 $(".mask").css({"transition":"all .8s ease","opacity":"0"});
                 setTimeout(function () {
