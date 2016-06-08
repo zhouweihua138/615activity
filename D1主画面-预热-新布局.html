@@ -147,10 +147,10 @@
         })
         //弹出框“好”按钮
         $(document).on("touchstart", ".alert-dialog .btn-ok", function () {
-            $(".alert-dialog-box").css({ "transition": "all .8s ease", "opacity": "0" });
+            $(".alert-dialog-box").css({ "-webkit-transition": "all .8s ease", "transition": "all .8s ease", "opacity": "0" });
             setTimeout(function () {
                 $(".alert-dialog-box").css({ "visibility": "hidden" });  //防止点击关闭按钮时按到其他按钮
-                $(".alert-dialog-box").css({ "transition": "none", "opacity": "1" });
+                $(".alert-dialog-box").css({ "-webkit-transition": "none", "transition": "none", "opacity": "1" });
             }, 800);
         });
 
@@ -159,7 +159,11 @@
         //分会场按钮触摸点击
         $(document).on("touchstart", ".common-footer .btn-fenhuichang", function () {
             $(".common-mask,.common-footer .sub-hall").toggleClass("show");
-            $("html,body").css({"overflow":"hidden"});
+            $(".common-mask").hasClass("show") ? $("html,body").css({ "overflow": "hidden" }) : $("html,body").css({ "overflow": "visible" })
+        });
+        $(document).on("click", ".common-mask,.common-footer .sub-hall .no-open", function () {
+            $(".common-mask,.common-footer .sub-hall").toggleClass("show");
+            $("html,body").css({ "overflow": "visible" });
         });
         //有底部导航的页面公用js end
     });
