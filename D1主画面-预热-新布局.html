@@ -107,14 +107,20 @@
             });
         }
         //提示框“好”按钮关闭提示框
-        $(document).on("click", ".alert-dialog .btn-ok", function () {
-            $(".alert-dialog-box").css({ "-webkit-transition": "all .8s ease", "transition": "all .8s ease", "opacity": "0" }).removeClass("show");
+        //$(document).on("click", ".alert-dialog .btn-ok", function () {
+        //    closeAlert();
+        //});
+        touch.on(".alert-dialog .btn-ok", "tap doubletap", function (ev) {
+            closeAlert();
+        });
+        function closeAlert() {
+            $(".alert-dialog-box").css({ "-webkit-transition": "all .5s ease", "transition": "all .5s ease", "opacity": "0" }).removeClass("show");
             $("body").off("touchmove");
             setTimeout(function () {
                 $(".alert-dialog-box").css({ "visibility": "hidden" });  //防止点击“好”关闭按钮时按到其他按钮
                 $(".alert-dialog-box").css({ "-webkit-transition": "none", "transition": "none", "opacity": "1" });
             }, 500);
-        });
+        }
 
         //有底部导航的页面公用js begin
         $("body").css("padding-bottom",$(".common-footer").height()-20);  //设置body底部填充底部导航的高度
