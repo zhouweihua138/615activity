@@ -628,6 +628,26 @@ img{border:none;}
 
 
 /* 礼物领取页面 begin*/
+.tips
+{
+    position:relative;
+    padding:2.25% 2.25% 2.25% 10%;
+    background:#fffdd0;
+    line-height:1.8rem;
+    color:#666666;
+    font-size:1.2rem;
+}
+.tips .icon-tips
+{
+    position:absolute;
+    left:3%;
+    top:0.8rem;
+    display:block;
+    width:1.5rem;
+    height:1.5rem;
+    background:url(../images/icon_tips.png) no-repeat;
+    background-size:cover;
+}
 .navbar{
     width:100%;
     height:4.08rem;
@@ -804,10 +824,13 @@ img{border:none;}
 
 /* 地址编辑页面 begin */
 .bd-address .frm-address{
-    padding:1rem;
+    padding:0 1rem 1rem;
 }
 .bd-address .frm-address .form-item{
     margin:1rem 0 0 0;
+}
+.bd-address .frm-address .form-item:first-child{
+    margin:0;
 }
 .form-item input,
 .form-item select{
